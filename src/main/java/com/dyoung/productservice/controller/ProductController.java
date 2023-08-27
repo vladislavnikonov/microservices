@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "api/product")
+@RequestMapping(value = "/api/product")
 @RequiredArgsConstructor
 public class ProductController {
 
     private final ProductService productService;
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody ProductRequest requestProduct) {
