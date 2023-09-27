@@ -37,6 +37,7 @@ public class OrderService {
                 .toList();
 
         // Call Inventory Service, and place order if product is in stock
+        // TODO: 27.09.2023 переписать на FeignClient
         InventoryResponse[] inventoryResponsArray = webClientBuilder.build().get()
                 .uri("http://inventory-service/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
