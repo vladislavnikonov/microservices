@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 0
 
 spring:
   application:
@@ -14,3 +14,10 @@ spring:
       #todo: сменить режим развертки
       ddl-auto: create-drop
       database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    hostname: localhost
