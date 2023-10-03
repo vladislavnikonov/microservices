@@ -11,6 +11,8 @@ eureka:
     hostname: localhost
 
 spring:
+  application:
+    name: discovery-server
   security:
     user:
       name: eureka
